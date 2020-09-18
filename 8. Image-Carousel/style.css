@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.carousel {
+  overflow: hidden;
+  /* 내용이 요소의 크기를 벗어났을 때 hidden : 자름*/
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 500px;
+  height: 500px;
+}
+
+.image-container {
+  display: flex;
+  transition: transform 0.3s linear;
+  transform: translateX(0);
+}
+
+img {
+  object-fit: cover;
+  /*내용이 종횡비를 유지하면서 정의된 너비와 높이를 가득 채울때까지 확대*/
+  width: 500px;
+  height: 500px;
+}

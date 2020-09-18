@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  text-align: center;
+  padding: 5rem;
+  transition: background 0.3s linear, color 0.3s linear;
+  /* linear : 전환(transition) 효과가 처음부터 끝까지 일정한 속도로 진행*/
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+.toggle-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+label {
+  background-color: rebeccapurple;
+  border-radius: 50%;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+body.dark label {
+  background-color: white;
+}
+
+input {
+  visibility: hidden; /*태그의 가시성을 결정, hidden 은 숨김 (자신의 영역은 계속 차지) 체크박스가 안보이게 함*/
+}
